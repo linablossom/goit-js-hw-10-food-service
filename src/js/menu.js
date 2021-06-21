@@ -14,12 +14,12 @@ const refs = {
 
 refs.inputEl.addEventListener("change", onCheckboxChange);
 
-function render() {
+function menuRender() {
   const html = items.map(menuItemTpl).join("");
   refs.menuEl.insertAdjacentHTML("beforeend", html);
 }
 
-render();
+menuRender();
 
 function onCheckboxChange(e) {
   const themeName = e.target.checked ? theme.DARK : theme.LIGHT;
